@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <style>
+        .buttons {
+
+            text-align: center;
+        }
+
+
+
+         .btn{
+            background-image: linear-gradient(to right, #000000 0%, #0f9b0f  51%, #000000  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+
+.container{
+
+}
+        .container form button {
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+
+      .anchor{
+    color: Green;
+    text-decoration:none;
+
+}
+    </style>
+     <script src="https://kit.fontawesome.com/5769a23459.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--header starts here-->
+<header class="header-area header-sticky">
+    <div class="container-fluid" style="background-color:#6bec54;">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg text-white navbar-light" style="background-color:#6bec54;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="{% static 'logo1.jpg' %}"
+                                                                       style="height: 50px; width: 50px;">Dream
+                            Landscaping</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white" aria-current="page" href="http://127.0.0.1:8000/landscape_app/userprofile/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="http://127.0.0.1:8000/landscape_app/aboutus/">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="http://127.0.0.1:8000/landscape_app/gallery/">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="http://127.0.0.1:8000/landscape_app/contactus/">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="http://127.0.0.1:8000/landscape_app/userlogin/">Logout</a>
+                                </li>
+<li class="nav-item">
+                                    <a class="nav-link text-dark"><i class="fa-solid fa-user"></i></i>&nbsp;{{fn}}</a>
+                                 </li>
+                                <!--burger button starts here-->
+<!--                          burger button ends here-->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--header ends here-->
+<!--carousel starts-->
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'userprofilecarousel3.jpg' %}" class="d-block w-100" alt="..." style="height:500px">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Grow your landscape into something amazing</h1>
+                <h5>Turn a garden into a dream </h5>
+            </div>
+        </div>
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'userprofilecarousel2.jpg' %}" class="d-block w-100" alt="..." style="height:500px">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Landscaping is the first step towards beautifying</h1>
+                <h5>Be a part of nature</h5>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'userprofilecarousel4.jpg' %}" class="d-block w-100" alt="..." style="height:500px">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color:black;">Design your outdoor space the right way</h1>
+                <h5 style="color:black;">Add value to your home</h5>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!--carousel ends-->
+<!--button starts-->
+<div class="container-fluid text-center mt-6" id="n">
+
+     <div class="row">
+         <div class="column">
+<a href="http://127.0.0.1:8000/landscape_app/viewbookservice/" class="btn btn text-white">View Services</a>
+         </div>
+     </div>
+      <div class="row">
+         <div class="column">
+<a href="http://127.0.0.1:8000/landscape_app/viewprojects/" class="btn btn text-white">View Projects</a>
+         </div>
+     </div>
+
+      <div class="row">
+         <div class="column">
+<a href="http://127.0.0.1:8000/landscape_app/displaymybookings/" class="btn btn text-white">View My Bookings</a>
+         </div>
+     </div>
+     </div>
+<!--buuton ends-->
+<!--footer-->
+{% include 'footer.html' %}
+<!--footer-->
+</body>
+</html>
